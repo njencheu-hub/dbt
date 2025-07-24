@@ -1,17 +1,5 @@
 version: 2
 
-sources:
-  - name: employee
-    database: DBT_DB
-    schema: PUBLIC
-    tables:
-      - name: EMPLOYEE_RAW
-  - name: customer
-    database: DBT_DB
-    schema: PUBLIC
-    tables:
-      - name: CUSTOMER_SRC
-
 models:
   - name: employee
     description: "DBT Model for employee table"
@@ -31,3 +19,29 @@ models:
     description: "DBT Model for the customer table"
   - name: customer_vw
     description: "DBT model for the customer view"
+  - name: sales
+    description: :DBT Model for the sales table"
+  - name: product
+    description: "DBT Model for the product table"
+
+sources:
+  - name: employee
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: EMPLOYEE_RAW
+  - name: customer
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: CUSTOMER_SRC
+  - name: sales
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: SALES_SRC
+  - name: product
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: PRODUCT_SRC
